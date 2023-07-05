@@ -1,5 +1,5 @@
 # Documentacion de API RESTFUL
-## Configuracion inicial - Credenciales de base de datos
+## Configuración inicial - Credenciales de base de datos
 En la ruta **models/conexion.php** dirigirse al metodo **infoDatabase()**
 
 Allí se configura la conexión a la base de datos, agregando el nombre de la base de datos, el usuario y la contraseña
@@ -18,7 +18,7 @@ static public function infoDatabase(){
 ```
 
 
-## Configuracion inicial - APIKEY
+## Configuración inicial - APIKEY
 En la ruta **models/conexion.php** dirigirse al metodo **apiKey()**
 
 Allí agregaras la llave segura de la API (Una contraseña creada por el administrador).
@@ -32,7 +32,7 @@ static public function apikey(){
 }
 ```
 
-## Configuracion inicial - Acceso público
+## Configuración inicial - Acceso público
 En la ruta **models/conexion.php** dirigirse al metodo **publicAccess()**
 
 Allí agreraras dentro de la matriz las tablas (separadas por coma) que serán de dominio público, es decir, la información a la que podran acceder de forma libre los usuarios de la API.
@@ -45,3 +45,22 @@ static public function publicAccess(){
 
 }
 ```
+
+## Configuración inicial - Base de datos
+Las tablas deben estar escritas en plural y el nombre de las columnas deben terminar con el nombre de la tabla en singular (_sufijo).
+
+Tabla: **categorias**
+
+Columnas: 
+  - id_categoria
+  - nombre_categoria
+  - imagen_categoria
+
+La primera columna debe ser el ID (auto incrementable).
+
+Para relacionar tablas, el número del ID de la tabla relacionada debe estar en una columna de la tabla principal, y dicha columna debe tener el siguiente orden de palabras: 
+id_(tabla relacionada en singular)_(tabla principal en singular).
+
+- Tabla principal: *productos*
+- Tabla relacionada: **categorias** | Columna: id_**categoria**_*producto*
+
