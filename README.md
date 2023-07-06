@@ -96,8 +96,56 @@ Consiste en agregar los parámetros **linkTo** y **equalTo** a la **url** . En e
 
 Ejemplo en servidor: http://apirest.com/platillos?select=id_platillo,nombre_platillo,descripcion_platillo&linkTo=nombre_platillo&equalTo=Coconut Cream Pie
 
-Ejemplo en servidor local (XAMPP): http://localhost/Estadias_BorderBytes/platillos?select=id_platillo,nombre_platillo,descripcion_platillo&linkTo=nombre_platillo&equalTo=Coconut Cream Pie
+Ejemplo en servidor local (XAMPP): http://localhost/API/platillos?select=id_platillo,nombre_platillo,descripcion_platillo&linkTo=nombre_platillo&equalTo=Coconut Cream Pie
 
 ### Filtrar una seleccion con varios valores
-Consiste en agregar más columnas separadas por comas al parámetro **linkTo** y en agregar más valores separados por coma en el parámetro **equalTo**.
+Consiste en agregar más columnas separadas por comas al parámetro **linkTo** y en agregar más valores separados por el catacter "**|**" en el parámetro **equalTo**.
 > Agregar un solo valor por cada columna adicional.
+
+Ejemplo en servidor: http://apirest.com/platillos?select=id_platillo,nombre_platillo,descripcion_platillo&linkTo=nombre_platillo,id_platillo&equalTo=Coconut Cream Pie|1
+
+Ejemplo en servidor local (XAMPP): http://localhost/API/platillos?select=id_platillo,nombre_platillo,descripcion_platillo&linkTo=nombre_platillo,id_platillo&equalTo=Coconut Cream Pie|1
+
+### Ordenar datos
+Consiste consiste en agregar los parámetros **orderBy** y **orderMode** e indicar en **orderBy** la columna que ordenará los datos y usar las palabras reservadas **ASC** o **DESC** en el parámetro **orderMode** para indicar el tipo de orden (Ascendente o Descendente).
+> El orden se puede aplicar a números, alfabeto o fechas.
+
+Ejemplo en servidor: http://apirest.com/platillos?orderBy=id_platillo&orderMode=DESC
+
+Ejemplo en servidor local (XAMPP): http://localhost/API/platillos?orderBy=id_platillo&orderMode=DESC
+
+### Limitar datos
+Consiste en agregar los parámetros **startAt** y **endAt** e indicar en **startAt** la posición inicial desde donde se desea limitar los datos (la primera posición es el 0) y en el parámetro **endAt** indicar la cantidad de registros que se desean seleccionar.
+> Se puede combinar el orden y los límites, pero siempre el orden será la prioridad para la API.
+
+Ejemplo en servidor: http://apirest.com/platillos?startAt=0&endAt=5
+
+Ejemplo en servidor local (XAMPP): http://localhost/API/platillos?startAt=0&endAt=5
+
+### Relaciones entre tablas
+Consiste en traer información entre varias tablas que estén relacionadas por su ID sin filtrar información.
+
+La estructura de la URL cambia: 
+  - Debemos agregar la palabra **relations** luego del ENDPOINT.
+  - Agregar el parámetro **rel**: Allí indicar en primer lugar el nombre de la tabla principal y luego separado por comas las tablas relacionadas.
+  - Luego agregar el parámetro **type**: Allí agregar los sufijos de las tablas puestas en el parámetro **rel**
+> Al no filtrar datos traemos el total de información de todas las tablas en relación de acuerdo a los datos seleccionados.
+
+Ejemplo en servidor: http://apirest.com/relations?rel=subcategorias,categorias&type=subcategoria,categoria
+
+Ejemplo en servidor local (XAMPP): http://localhost/API/relations?rel=subcategorias,categorias&type=subcategoria,categoria
+
+### Busqueda con filtros
+Consiste en realizar búsquedas en la base de datos en una sola tabla usando palabras claves y filtrando datos exactos. Usamos el parámetro **linkTo** para el nombre de columnas y agregamos el parámetro **search** para la búsqueda de la palabra clave y datos exactos.
+> El primer valor de **linkTo** debe ser siempre la columna en donde se realizará la búsqueda, de igual forma, el primer valor de **search** debe ser la palabra clave. Luego aplicamos los filtros, comas para os vvalores de **linkTo** y "**|**" para los valores de **search**.
+
+Ejemplo en servidor: http://apirest.com/platillos?select=nombre_platillo&linkTo=nombre_platillo,id_subcategoria_platillo&search=vainilla|2
+
+Ejemplo en servidor local (XAMPP): http://localhost/API/platillos?select=nombre_platillo&linkTo=nombre_platillo,id_subcategoria_platillo&search=vainilla|2
+
+### Rangos con filtros
+Consiste en seleccionar un rango de datos entre números o fechas en una sola tabla agregando los parámetros **between1** para el rango inicial y **between2** para el rango final, filtramos la información con el parámetro **filterTo** indicando el nombre de columna y el parámetro **inTo** para indicar el valor del filtro.
+
+Ejemplo en servidor: http://apirest.com/platillos?linkTo=precio_platillo&between1=100&between2=150&orderBy=precio_platillo&orderMode=ASC&select=id_platillo,nombre_platillo,precio_platillo,id_categoria_platillo&filterTo=id_categoria_platillo&inTo=4
+
+Ejemplo en servidor local (XAMPP): http://localhost/API/platillos?linkTo=precio_platillo&between1=100&between2=150&orderBy=precio_platillo&orderMode=ASC&select=id_platillo,nombre_platillo,precio_platillo,id_categoria_platillo&filterTo=id_categoria_platillo&inTo=4
