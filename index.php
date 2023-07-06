@@ -1,6 +1,6 @@
 <?php
 
-/* Mostrar errores */
+/* Mostrar errores sfesfe */
 ini_set('display_errors', 1);
 ini_set('log_errors', 1);
 ini_set('error_log', 'C:/xampp/tdocs/Estadias_BorderBytes/php_error_log');
