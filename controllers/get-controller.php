@@ -86,6 +86,8 @@ class GetController{
 
     /* Respuesta del controlador */
     public function fncResponse($response){
+        
+        $log = new Conexion();
 
         if (!empty($response)) {
 
@@ -96,6 +98,9 @@ class GetController{
             );
             
             echo json_encode($json, http_response_code($json["status"]));
+
+            
+            $log -> apiRequests($json);
             
             return;
 
@@ -105,6 +110,8 @@ class GetController{
                 'status' => 404,
                 'results' => 'Not Found'
             );
+
+            $log -> apiRequests($json);
 
             echo json_encode($json, http_response_code($json["status"]));
             

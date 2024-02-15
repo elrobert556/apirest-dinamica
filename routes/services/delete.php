@@ -14,6 +14,8 @@ if (isset($_GET["id"]) && isset($_GET["nameId"])) {
             'status' => 400,
             'results' => 'ERROR: Los campos no coinciden con la base de datos'
         );
+
+        Conexion::apiRequests($json);
         
         echo json_encode($json, http_response_code($json["status"]));
     
@@ -46,6 +48,8 @@ if (isset($_GET["id"]) && isset($_GET["nameId"])) {
                 'results' => "ERROR: El token ha expirado"
             );
 
+            Conexion::apiRequests($json);
+
             echo json_encode($json, http_response_code($json["status"]));
         
             return;
@@ -59,6 +63,8 @@ if (isset($_GET["id"]) && isset($_GET["nameId"])) {
                 'status' => 400,
                 'results' => "ERROR: El usuario no esta autorizado"
             );
+
+            Conexion::apiRequests($json);
 
             echo json_encode($json, http_response_code($json["status"]));
         
@@ -74,10 +80,26 @@ if (isset($_GET["id"]) && isset($_GET["nameId"])) {
             'results' => "ERROR: Autorizacion requerida"
         );
 
+        Conexion::apiRequests($json);
+
         echo json_encode($json, http_response_code($json["status"]));
     
         return;
 
     }
+
+}else{
+
+    /* Error cuando el query tiene error de sintaxis */
+    $json = array(
+        'status' => 400,
+        'results' => "ERROR: El query no cuenta con  las variables requeridas"
+    );
+
+    Conexion::apiRequests($json);
+
+    echo json_encode($json, http_response_code($json["status"]));
+
+    return;
 
 }

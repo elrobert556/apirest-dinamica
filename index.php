@@ -1,9 +1,10 @@
 <?php
 
 /* Mostrar errores */
+error_reporting(E_ALL); // Error/Exception engine, always use E_ALL
 ini_set('display_errors', 1);
 ini_set('log_errors', 1);
-ini_set('error_log', 'C:/xampp/tdocs/Estadias_BorderBytes/php_error_log');
+ini_set('error_log', 'C:/xampp/htdocs/Estadias_BorderBytes/php_error_log');
 
 /* CORS */
 header('Access-Control-Allow-Origin: *');

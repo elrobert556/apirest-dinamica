@@ -23,6 +23,22 @@ class PostController{
     /* Peticion POST para registrar usuario */
     static public function postRegister($table, $data, $suffix){
 
+        /* Verificar que el telefono no este registrado en la BD */
+        $response = GetModel::getDataFilter($table,"*","email_empleado", $data['email_empleado'], null, null, null, null);
+
+        if ($response != null) {
+            $json = array(
+                'status' => 404,
+                'results' => "Ya existe una cuenta con este correo electronico"
+            );
+
+            Conexion::apiRequests($json);
+            
+            echo json_encode($json, http_response_code($json["status"]));
+            
+            return;
+        }
+
         if (isset($data['password_'.$suffix]) && isset($data['password_'.$suffix]) != null) {
             
             $crypt = crypt($data['password_'.$suffix], '$2a$07$borderbytesestadiasimmtjr$');
@@ -178,6 +194,8 @@ class PostController{
                 'status' => 200,
                 'results' => $response
             );
+
+            Conexion::apiRequests($json);
             
             echo json_encode($json, http_response_code($json["status"]));
             
@@ -201,6 +219,8 @@ class PostController{
                 );
     
             }
+
+            Conexion::apiRequests($json);
 
             echo json_encode($json, http_response_code($json["status"]));
             

@@ -30,6 +30,8 @@ if (isset($_GET["id"]) && isset($_GET["nameId"])) {
             'status' => 400,
             'results' => 'ERROR: Los campos no coinciden con la base de datos'
         );
+
+        Conexion::apiRequests($json);
         
         echo json_encode($json, http_response_code($json["status"]));
     
@@ -40,6 +42,56 @@ if (isset($_GET["id"]) && isset($_GET["nameId"])) {
     /* Solicitar respuesta del controlador para crear datos en la tabla */
     $response = new PutController();
     $response -> putData($table, $data, $_GET["id"], $_GET["nameId"]);
+
+    return;
+
+}
+else{
+
+    /* Error cuando el query tiene error de sintaxis */
+    $json = array(
+        'status' => 400,
+        'results' => "ERROR: El query no cuenta con  las variables requeridas"
+    );
+
+    Conexion::apiRequests($json);
+
+    echo json_encode($json, http_response_code($json["status"]));
+
+    return;
+
+}
+
+/* Actualizar password */
+if (isset($_GET['upLogin']) && $_GET['upLogin'] == true && isset($_GET['suffix'])) {
+
+    $id = $_GET['id'];
+    
+    /* Capturar datos del formulario */
+    $data = array();
+
+    parse_str(file_get_contents('php://input'), $data);
+
+    /* Solicitar respuesta del controlador para crear datos en la tabla */
+    $response = new PutController();
+    $response -> putPassword($table, $data, $id, $_GET['suffix']);
+
+    return;
+
+}
+else{
+
+    /* Error cuando el query tiene error de sintaxis */
+    $json = array(
+        'status' => 400,
+        'results' => "ERROR: El query no cuenta con  las variables requeridas"
+    );
+
+    Conexion::apiRequests($json);
+
+    echo json_encode($json, http_response_code($json["status"]));
+
+    return;
 
 }
 

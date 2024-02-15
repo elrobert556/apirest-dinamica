@@ -17,12 +17,16 @@ class DeleteController{
     /* Respuesta del controlador */
     public function fncResponse($response){
 
+        $log = new Conexion();
+
         if (!empty($response)) {
 
             $json = array(
                 'status' => 200,
                 'results' => $response
             );
+
+            $log -> apiRequests($json);
             
             echo json_encode($json, http_response_code($json["status"]));
             
@@ -35,6 +39,8 @@ class DeleteController{
                 'results' => 'Not Found',
                 'method' => 'delete'
             );
+
+            $log -> apiRequests($json);
 
             echo json_encode($json, http_response_code($json["status"]));
             

@@ -1,0 +1,9 @@
+[14-Feb-2024 17:51:25 Europe/Berlin] PHP Warning:  Undefined variable $json in C:\xampp\htdocs\Estadias_BorderBytes\index.php on line 9
+[14-Feb-2024 17:51:25 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Estadias_BorderBytes\index.php on line 9
+[14-Feb-2024 17:51:25 Europe/Berlin] PHP Deprecated:  http_response_code(): Passing null to parameter #1 ($response_code) of type int is deprecated in C:\xampp\htdocs\Estadias_BorderBytes\index.php on line 9
+[14-Feb-2024 17:53:31 Europe/Berlin] PHP Warning:  Undefined variable $response in C:\xampp\htdocs\Estadias_BorderBytes\index.php on line 9
+[14-Feb-2024 17:53:31 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Estadias_BorderBytes\index.php on line 9
+[14-Feb-2024 17:58:14 Europe/Berlin] PHP Warning:  Undefined variable $response in C:\xampp\htdocs\Estadias_BorderBytes\index.php on line 9
+[14-Feb-2024 17:58:14 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Estadias_BorderBytes\index.php on line 9
+[14-Feb-2024 18:08:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Estadias_BorderBytes\controllers\get-controller.php on line 122
+[14-Feb-2024 18:11:29 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\Estadias_BorderBytes\controllers\get-controller.php on line 125

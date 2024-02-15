@@ -142,4 +142,13 @@ class Conexion {
 
     }
 
+    static public function apiRequests($json){
+        date_default_timezone_set('America/Monterrey');
+        $log_data = date("Y-m-d H:i:s") . " - Status: ".$json["status"]." - ".$_SERVER['REQUEST_METHOD']." Request: " . json_encode($_GET) . " - Response: ".json_encode($json["results"])."\n";
+
+        $log_file = 'api_requests.log';
+
+        file_put_contents($log_file, $log_data, FILE_APPEND);
+    }
+
 }

@@ -21,6 +21,8 @@ if (isset($_POST)) {
             'status' => 400,
             'results' => 'ERROR: Los campos no coinciden con la base de datos'
         );
+
+        Conexion::apiRequests($json);
         
         echo json_encode($json, http_response_code($json["status"]));
     
@@ -58,6 +60,8 @@ if (isset($_POST)) {
                         'status' => 400,
                         'results' => 'ERROR: Los campos no coinciden con la base de datos'
                     );
+
+                    Conexion::apiRequests($json);
                     
                     echo json_encode($json, http_response_code($json["status"]));
                 
@@ -91,6 +95,8 @@ if (isset($_POST)) {
                         'results' => "ERROR: El token ha expirado"
                     );
 
+                    Conexion::apiRequests($json);
+
                     echo json_encode($json, http_response_code($json["status"]));
                 
                     return;
@@ -104,6 +110,8 @@ if (isset($_POST)) {
                         'status' => 400,
                         'results' => "ERROR: El usuario no esta autorizado"
                     );
+
+                    Conexion::apiRequests($json);
 
                     echo json_encode($json, http_response_code($json["status"]));
                 
@@ -120,6 +128,8 @@ if (isset($_POST)) {
                 'status' => 400,
                 'results' => "ERROR: Autorizacion requerida"
             );
+
+            Conexion::apiRequests($json);
 
             echo json_encode($json, http_response_code($json["status"]));
         
