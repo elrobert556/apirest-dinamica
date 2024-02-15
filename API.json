@@ -1,0 +1,1007 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "apirest-borderbytes",
+    "dateExported": "2024-02-15T19:16:52.515Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "8ba1d84c-bf95-4daa-90ee-6d9880ffe8d9",
+            "colId": "d3a4d576-fd74-4579-bf46-32e3d1c947c0",
+            "containerId": "",
+            "name": "GET - Filtros de varios valores",
+            "url": "localhost/Estadias_BorderBytes/platillos?select=id_platillo,nombre_platillo,descripcion_platillo&linkTo=nombre_platillo,id_platillo&equalTo=Hamburguesa clásica|1",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-06-14T15:50:09.805Z",
+            "modified": "2024-02-14T17:13:51.256Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "bz8VVmSR5Pvb589EhAR2YUH25e3VB7"
+                }
+            ],
+            "params": [
+                {
+                    "name": "select",
+                    "value": "id_platillo,nombre_platillo,descripcion_platillo",
+                    "isPath": false
+                },
+                {
+                    "name": "linkTo",
+                    "value": "nombre_platillo,id_platillo",
+                    "isPath": false
+                },
+                {
+                    "name": "equalTo",
+                    "value": "Hamburguesa clásica|1",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "e67c7fac-1904-4db8-8893-03d33d376298",
+            "colId": "d3a4d576-fd74-4579-bf46-32e3d1c947c0",
+            "containerId": "",
+            "name": "GET - Seleccionar datos especificos",
+            "url": "localhost/Estadias_BorderBytes/platillos?select=id_platillo,nombre_platillo",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-06-14T15:56:12.072Z",
+            "modified": "2023-07-11T03:28:55.734Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "bz8VVmSR5Pvb589EhAR2YUH25e3VB7"
+                }
+            ],
+            "params": [
+                {
+                    "name": "select",
+                    "value": "id_platillo,nombre_platillo",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "7d33bbf8-0a63-4363-937d-6526fc802b50",
+            "colId": "d3a4d576-fd74-4579-bf46-32e3d1c947c0",
+            "containerId": "",
+            "name": "GET - Filtro de un solo valor",
+            "url": "localhost/Estadias_BorderBytes/platillos?select=id_platillo,nombre_platillo,descripcion_platillo&linkTo=nombre_platillo&equalTo=Coconut Cream Pie",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-06-14T15:58:29.844Z",
+            "modified": "2023-06-29T17:16:34.944Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "bz8VVmSR5Pvb589EhAR2YUH25e3VB7"
+                }
+            ],
+            "params": [
+                {
+                    "name": "select",
+                    "value": "id_platillo,nombre_platillo,descripcion_platillo",
+                    "isPath": false
+                },
+                {
+                    "name": "linkTo",
+                    "value": "nombre_platillo",
+                    "isPath": false
+                },
+                {
+                    "name": "equalTo",
+                    "value": "Coconut Cream Pie",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "7b05d3c9-7927-4bae-840d-e558c6dd7374",
+            "colId": "d3a4d576-fd74-4579-bf46-32e3d1c947c0",
+            "containerId": "",
+            "name": "GET - Ordenar datos sin filtro",
+            "url": "localhost/Estadias_BorderBytes/platillos?select=*&orderBy=id_platillo&orderMode=DESC",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-06-14T16:01:33.713Z",
+            "modified": "2023-06-14T16:01:33.713Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "bz8VVmSR5Pvb589EhAR2YUH25e3VB7"
+                }
+            ],
+            "params": [
+                {
+                    "name": "select",
+                    "value": "*",
+                    "isPath": false
+                },
+                {
+                    "name": "orderBy",
+                    "value": "id_platillo",
+                    "isPath": false
+                },
+                {
+                    "name": "orderMode",
+                    "value": "DESC",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "65280e59-95d0-45cd-a51e-5300123c06d3",
+            "colId": "d3a4d576-fd74-4579-bf46-32e3d1c947c0",
+            "containerId": "",
+            "name": "GET - Ordenar datos con filtro",
+            "url": "localhost/Estadias_BorderBytes/platillos?select=*&orderBy=id_platillo&orderMode=DESC&linkTo=id_subcategoria_platillo&equalTo=1",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-06-14T16:02:48.891Z",
+            "modified": "2023-06-14T16:02:48.891Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "bz8VVmSR5Pvb589EhAR2YUH25e3VB7"
+                }
+            ],
+            "params": [
+                {
+                    "name": "select",
+                    "value": "*",
+                    "isPath": false
+                },
+                {
+                    "name": "orderBy",
+                    "value": "id_platillo",
+                    "isPath": false
+                },
+                {
+                    "name": "orderMode",
+                    "value": "DESC",
+                    "isPath": false
+                },
+                {
+                    "name": "linkTo",
+                    "value": "id_subcategoria_platillo",
+                    "isPath": false
+                },
+                {
+                    "name": "equalTo",
+                    "value": "1",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "38ef9385-cc6f-49b3-8f75-1279c90005dd",
+            "colId": "d3a4d576-fd74-4579-bf46-32e3d1c947c0",
+            "containerId": "",
+            "name": "GET - Limitar datos sin filtro",
+            "url": "localhost/Estadias_BorderBytes/platillos?startAt=0&endAt=5",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2023-06-14T16:05:20.886Z",
+            "modified": "2023-07-06T16:31:17.899Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "bz8VVmSR5Pvb589EhAR2YUH25e3VB7"
+                }
+            ],
+            "params": [
+                {
+                    "name": "select",
+                    "value": "*",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "startAt",
+                    "value": "0",
+                    "isPath": false
+                },
+                {
+                    "name": "endAt",
+                    "value": "5",
+                    "isPath": false
+                },
+                {
+                    "name": "orderBy",
+                    "value": "id_platillo",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "orderMode",
+                    "value": "DESC",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "8322d547-b7bc-4a94-aa3e-acb9ee993868",
+            "colId": "d3a4d576-fd74-4579-bf46-32e3d1c947c0",
+            "containerId": "",
+            "name": "GET - Limitar datos con filtros",
+            "url": "localhost/Estadias_BorderBytes/platillos?select=*&startAt=0&endAt=5&orderBy=id_platillo&orderMode=ASC&linkTo=id_subcategoria_platillo&equalTo=1",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2023-06-14T16:06:54.214Z",
+            "modified": "2023-06-14T16:06:54.214Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "bz8VVmSR5Pvb589EhAR2YUH25e3VB7"
+                }
+            ],
+            "params": [
+                {
+                    "name": "select",
+                    "value": "*",
+                    "isPath": false
+                },
+                {
+                    "name": "startAt",
+                    "value": "0",
+                    "isPath": false
+                },
+                {
+                    "name": "endAt",
+                    "value": "5",
+                    "isPath": false
+                },
+                {
+                    "name": "orderBy",
+                    "value": "id_platillo",
+                    "isPath": false
+                },
+                {
+                    "name": "orderMode",
+                    "value": "ASC",
+                    "isPath": false
+                },
+                {
+                    "name": "linkTo",
+                    "value": "id_subcategoria_platillo",
+                    "isPath": false
+                },
+                {
+                    "name": "equalTo",
+                    "value": "1",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "1d85c002-8f89-4019-986a-b26b85c500bb",
+            "colId": "d3a4d576-fd74-4579-bf46-32e3d1c947c0",
+            "containerId": "",
+            "name": "GET - Relaciones entre tablas sin filtro",
+            "url": "localhost/Estadias_BorderBytes/relations?rel=subcategorias,categorias&type=subcategoria,categoria",
+            "method": "GET",
+            "sortNum": 85000,
+            "created": "2023-06-14T16:08:18.712Z",
+            "modified": "2023-06-19T17:44:09.784Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "bz8VVmSR5Pvb589EhAR2YUH25e3VB7"
+                }
+            ],
+            "params": [
+                {
+                    "name": "rel",
+                    "value": "subcategorias,categorias",
+                    "isPath": false
+                },
+                {
+                    "name": "type",
+                    "value": "subcategoria,categoria",
+                    "isPath": false
+                },
+                {
+                    "name": "select",
+                    "value": "id_platillo,nombre_platillo,nombre_categoria,nombre_subcategoria",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "5dd3d170-e6fd-4316-ae03-9c644a4a45c2",
+            "colId": "d3a4d576-fd74-4579-bf46-32e3d1c947c0",
+            "containerId": "",
+            "name": "GET - Relaciones entre tablas con filtro",
+            "url": "localhost/Estadias_BorderBytes/relations?linkTo=precio_platillo&equalTo=100&select=id_platillo,nombre_platillo,precio_platillo&rel=platillos,subcategorias,categorias&type=platillo,subcategoria,categoria",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2023-06-14T16:09:16.702Z",
+            "modified": "2023-06-22T04:16:21.596Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "bz8VVmSR5Pvb589EhAR2YUH25e3VB7"
+                }
+            ],
+            "params": [
+                {
+                    "name": "linkTo",
+                    "value": "precio_platillo",
+                    "isPath": false
+                },
+                {
+                    "name": "equalTo",
+                    "value": "100",
+                    "isPath": false
+                },
+                {
+                    "name": "select",
+                    "value": "id_platillo,nombre_platillo,precio_platillo",
+                    "isPath": false
+                },
+                {
+                    "name": "rel",
+                    "value": "platillos,subcategorias,categorias",
+                    "isPath": false
+                },
+                {
+                    "name": "type",
+                    "value": "platillo,subcategoria,categoria",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "357cb197-0419-4e8f-ace2-a705f71b642b",
+            "colId": "d3a4d576-fd74-4579-bf46-32e3d1c947c0",
+            "containerId": "",
+            "name": "GET - Busqueda sin relaciones",
+            "url": "localhost/Estadias_BorderBytes/platillos?select=nombre_platillo&linkTo=nombre_platillo&search=vainilla",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2023-06-14T16:11:26.776Z",
+            "modified": "2023-06-14T16:11:26.776Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "bz8VVmSR5Pvb589EhAR2YUH25e3VB7"
+                }
+            ],
+            "params": [
+                {
+                    "name": "select",
+                    "value": "nombre_platillo",
+                    "isPath": false
+                },
+                {
+                    "name": "linkTo",
+                    "value": "nombre_platillo",
+                    "isPath": false
+                },
+                {
+                    "name": "search",
+                    "value": "vainilla",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "416a851f-fd1b-4776-80a1-9e0066b008fa",
+            "colId": "d3a4d576-fd74-4579-bf46-32e3d1c947c0",
+            "containerId": "",
+            "name": "GET - Busqueda sin relaciones y con filtros",
+            "url": "localhost/Estadias_BorderBytes/platillos?select=nombre_platillo&linkTo=nombre_platillo,id_subcategoria_platillo&search=vainilla|2",
+            "method": "GET",
+            "sortNum": 120000,
+            "created": "2023-06-14T16:15:02.340Z",
+            "modified": "2023-06-14T16:15:02.340Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "bz8VVmSR5Pvb589EhAR2YUH25e3VB7"
+                }
+            ],
+            "params": [
+                {
+                    "name": "select",
+                    "value": "nombre_platillo",
+                    "isPath": false
+                },
+                {
+                    "name": "linkTo",
+                    "value": "nombre_platillo,id_subcategoria_platillo",
+                    "isPath": false
+                },
+                {
+                    "name": "search",
+                    "value": "vainilla|2",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "c637ab25-aa80-49c4-82f3-e1cd63c3d384",
+            "colId": "d3a4d576-fd74-4579-bf46-32e3d1c947c0",
+            "containerId": "",
+            "name": "GET - Busqueda con relaciones y con filtros",
+            "url": "localhost/Estadias_BorderBytes/relations?rel=platillos,categorias&type=platillo,categoria&select=*&linkTo=nombre_platillo,id_categoria_platillo&search=vainilla|4",
+            "method": "GET",
+            "sortNum": 130000,
+            "created": "2023-06-14T16:16:17.520Z",
+            "modified": "2023-07-06T17:50:52.795Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "bz8VVmSR5Pvb589EhAR2YUH25e3VB7"
+                }
+            ],
+            "params": [
+                {
+                    "name": "rel",
+                    "value": "platillos,categorias",
+                    "isPath": false
+                },
+                {
+                    "name": "type",
+                    "value": "platillo,categoria",
+                    "isPath": false
+                },
+                {
+                    "name": "select",
+                    "value": "*",
+                    "isPath": false
+                },
+                {
+                    "name": "linkTo",
+                    "value": "nombre_platillo,id_categoria_platillo",
+                    "isPath": false
+                },
+                {
+                    "name": "search",
+                    "value": "vainilla|4",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "db9504a0-199b-43a8-9a8f-a853b12ed17c",
+            "colId": "d3a4d576-fd74-4579-bf46-32e3d1c947c0",
+            "containerId": "",
+            "name": "GET - Seleccionar rangos",
+            "url": "localhost/Estadias_BorderBytes/platillos?linkTo=precio_platillo&between1=100&between2=150&orderBy=precio_platillo&orderMode=ASC&select=id_platillo,nombre_platillo,precio_platillo,id_categoria_platillo&filterTo=id_categoria_platillo&inTo=4",
+            "method": "GET",
+            "sortNum": 140000,
+            "created": "2023-06-14T16:18:05.270Z",
+            "modified": "2023-07-06T16:53:46.237Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "bz8VVmSR5Pvb589EhAR2YUH25e3VB7"
+                }
+            ],
+            "params": [
+                {
+                    "name": "linkTo",
+                    "value": "precio_platillo",
+                    "isPath": false
+                },
+                {
+                    "name": "between1",
+                    "value": "100",
+                    "isPath": false
+                },
+                {
+                    "name": "between2",
+                    "value": "150",
+                    "isPath": false
+                },
+                {
+                    "name": "orderBy",
+                    "value": "precio_platillo",
+                    "isPath": false
+                },
+                {
+                    "name": "orderMode",
+                    "value": "ASC",
+                    "isPath": false
+                },
+                {
+                    "name": "select",
+                    "value": "id_platillo,nombre_platillo,precio_platillo,id_categoria_platillo",
+                    "isPath": false
+                },
+                {
+                    "name": "filterTo",
+                    "value": "id_categoria_platillo",
+                    "isPath": false
+                },
+                {
+                    "name": "inTo",
+                    "value": "4",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "9238aad5-d90d-4a3b-9cba-2401e4cc26fa",
+            "colId": "d3a4d576-fd74-4579-bf46-32e3d1c947c0",
+            "containerId": "",
+            "name": "GET - Rangos entre relaciones con filtros",
+            "url": "localhost/Estadias_BorderBytes/relations?rel=platillos,categorias&type=platillo,categoria&select=id_platillo,nombre_platillo,precio_platillo,id_categoria,nombre_categoria&linkTo=precio_platillo&between1=80&between2=120&orderBy=precio_platillo&orderMode=ASC&filterTo=id_categoria_platillo&inTo=5,3",
+            "method": "GET",
+            "sortNum": 150000,
+            "created": "2023-06-14T16:19:18.804Z",
+            "modified": "2023-06-14T16:19:18.804Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "bz8VVmSR5Pvb589EhAR2YUH25e3VB7"
+                }
+            ],
+            "params": [
+                {
+                    "name": "rel",
+                    "value": "platillos,categorias",
+                    "isPath": false
+                },
+                {
+                    "name": "type",
+                    "value": "platillo,categoria",
+                    "isPath": false
+                },
+                {
+                    "name": "select",
+                    "value": "id_platillo,nombre_platillo,precio_platillo,id_categoria,nombre_categoria",
+                    "isPath": false
+                },
+                {
+                    "name": "linkTo",
+                    "value": "precio_platillo",
+                    "isPath": false
+                },
+                {
+                    "name": "between1",
+                    "value": "80",
+                    "isPath": false
+                },
+                {
+                    "name": "between2",
+                    "value": "120",
+                    "isPath": false
+                },
+                {
+                    "name": "orderBy",
+                    "value": "precio_platillo",
+                    "isPath": false
+                },
+                {
+                    "name": "orderMode",
+                    "value": "ASC",
+                    "isPath": false
+                },
+                {
+                    "name": "filterTo",
+                    "value": "id_categoria_platillo",
+                    "isPath": false
+                },
+                {
+                    "name": "inTo",
+                    "value": "5,3",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "e86c1e2f-61a5-4621-b901-360f183b83d1",
+            "colId": "d3a4d576-fd74-4579-bf46-32e3d1c947c0",
+            "containerId": "",
+            "name": "POST - Insertar registro de forma dinamica",
+            "url": "localhost/Estadias_BorderBytes/platillos?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDc5NzU4OTcsImV4cCI6MTcwODA2MjI5NywiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJzb3BvcnRlQGJvcmRlcmJ5dGVzLm14In19.UcczRc3RUmK_-BvTWet8Rk4nr1DXlKbSlF_ury_b45Y&table=empleados&suffix=empleado",
+            "method": "POST",
+            "sortNum": 160000,
+            "created": "2023-06-14T16:23:21.673Z",
+            "modified": "2024-02-15T05:45:45.023Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "bz8VVmSR5Pvb589EhAR2YUH25e3VB7"
+                }
+            ],
+            "params": [
+                {
+                    "name": "token",
+                    "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDc5NzU4OTcsImV4cCI6MTcwODA2MjI5NywiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJzb3BvcnRlQGJvcmRlcmJ5dGVzLm14In19.UcczRc3RUmK_-BvTWet8Rk4nr1DXlKbSlF_ury_b45Y",
+                    "isPath": false
+                },
+                {
+                    "name": "table",
+                    "value": "empleados",
+                    "isPath": false
+                },
+                {
+                    "name": "suffix",
+                    "value": "empleado",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "nombre_platillo",
+                        "value": "peticion post token 2"
+                    },
+                    {
+                        "name": "descripcion_platillo",
+                        "value": "descripcion de prueba"
+                    },
+                    {
+                        "name": "precio_platillo",
+                        "value": "90"
+                    },
+                    {
+                        "name": "tiempo_preparacion_platillo",
+                        "value": "145"
+                    },
+                    {
+                        "name": "imagen_platillo",
+                        "value": "https://thecheesecakefactory.com.mx/wp-content/uploads/2022/03/CCF_BakedRigatoni.jpg"
+                    },
+                    {
+                        "name": "id_subcategoria_platillo",
+                        "value": "2"
+                    },
+                    {
+                        "name": "id_categoria_platillo",
+                        "value": "4"
+                    },
+                    {
+                        "name": "status_platillo",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "8b4cd530-4c3a-4c46-a056-1493fcf5c354",
+            "colId": "d3a4d576-fd74-4579-bf46-32e3d1c947c0",
+            "containerId": "",
+            "name": "PUT - Edicion dinamica de registro",
+            "url": "localhost/Estadias_BorderBytes/platillos?id=175&nameId=id_platillo&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDc5Nzg2MDAsImV4cCI6MTcwODA2NTAwMCwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJzb3BvcnRlQGJvcmRlcmJ5dGVzLm14In19.6pMrYPU-nQMklFy-TTdd359G3R4OymwpCByz8VElZw8",
+            "method": "PUT",
+            "sortNum": 170000,
+            "created": "2023-06-08T12:24:58.270Z",
+            "modified": "2024-02-15T06:32:51.258Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "bz8VVmSR5Pvb589EhAR2YUH25e3VB7"
+                }
+            ],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "175",
+                    "isPath": false
+                },
+                {
+                    "name": "nameId",
+                    "value": "id_platillo",
+                    "isPath": false
+                },
+                {
+                    "name": "token",
+                    "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDc5Nzg2MDAsImV4cCI6MTcwODA2NTAwMCwiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJzb3BvcnRlQGJvcmRlcmJ5dGVzLm14In19.6pMrYPU-nQMklFy-TTdd359G3R4OymwpCByz8VElZw8",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "nombre_platillo",
+                        "value": "prueba put"
+                    },
+                    {
+                        "name": "descripcion_platillo",
+                        "value": "descripcion de prueba put",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "precio_platillo",
+                        "value": "75.50",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "tiempo_preparacion_platillo",
+                        "value": "50",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "imagen_platillo",
+                        "value": "https://thecheesecakefactory.com.mx/wp-content/uploads/2022/03/CCF_BakedRigatoni.jpg",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "id_subcategoria_platillo",
+                        "value": "2",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "id_categoria_platillo",
+                        "value": "4",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "status_platillo",
+                        "value": "1",
+                        "isDisabled": true
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "c24a542c-82c0-4e7b-ae2b-32d0af0a7b80",
+            "colId": "d3a4d576-fd74-4579-bf46-32e3d1c947c0",
+            "containerId": "",
+            "name": "Registro usuario",
+            "url": "localhost/Estadias_BorderBytes/empleados?register=true&suffix=empleado",
+            "method": "POST",
+            "sortNum": 180000,
+            "created": "2023-07-06T14:55:42.995Z",
+            "modified": "2023-07-13T14:21:59.216Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "bz8VVmSR5Pvb589EhAR2YUH25e3VB7"
+                }
+            ],
+            "params": [
+                {
+                    "name": "register",
+                    "value": "true",
+                    "isPath": false
+                },
+                {
+                    "name": "suffix",
+                    "value": "empleado",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "email_empleado",
+                        "value": "soporte@borderbytes.mx"
+                    },
+                    {
+                        "name": "password_empleado",
+                        "value": "12345678"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "49ee7a36-630d-4728-8218-dcfe21f0575d",
+            "colId": "d3a4d576-fd74-4579-bf46-32e3d1c947c0",
+            "containerId": "",
+            "name": "Login usuario",
+            "url": "localhost/Estadias_BorderBytes/empleados?login=true&suffix=empleado",
+            "method": "POST",
+            "sortNum": 190000,
+            "created": "2023-07-06T14:55:50.497Z",
+            "modified": "2024-02-15T06:28:13.060Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "bz8VVmSR5Pvb589EhAR2YUH25e3VB7"
+                }
+            ],
+            "params": [
+                {
+                    "name": "login",
+                    "value": "true",
+                    "isPath": false
+                },
+                {
+                    "name": "suffix",
+                    "value": "empleado",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "email_empleado",
+                        "value": "soporte@borderbytes.mx"
+                    },
+                    {
+                        "name": "password_empleado",
+                        "value": "ABCabc123*"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "66b5c19a-a4ec-4288-9c62-50758d1c1b02",
+            "colId": "d3a4d576-fd74-4579-bf46-32e3d1c947c0",
+            "containerId": "",
+            "name": "DELETE - Eliminar registro",
+            "url": "localhost/Estadias_BorderBytes/platillos?id=172&nameId=id_platillo&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDc5NzU4OTcsImV4cCI6MTcwODA2MjI5NywiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJzb3BvcnRlQGJvcmRlcmJ5dGVzLm14In19.UcczRc3RUmK_-BvTWet8Rk4nr1DXlKbSlF_ury_b45Y&table=empleados&suffix=empleado",
+            "method": "DELETE",
+            "sortNum": 200000,
+            "created": "2023-07-07T15:59:59.520Z",
+            "modified": "2024-02-15T06:06:48.907Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "bz8VVmSR5Pvb589EhAR2YUH25e3VB7"
+                }
+            ],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "172",
+                    "isPath": false
+                },
+                {
+                    "name": "nameId",
+                    "value": "id_platillo",
+                    "isPath": false
+                },
+                {
+                    "name": "token",
+                    "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDc5NzU4OTcsImV4cCI6MTcwODA2MjI5NywiZGF0YSI6eyJpZCI6MSwiZW1haWwiOiJzb3BvcnRlQGJvcmRlcmJ5dGVzLm14In19.UcczRc3RUmK_-BvTWet8Rk4nr1DXlKbSlF_ury_b45Y",
+                    "isPath": false
+                },
+                {
+                    "name": "table",
+                    "value": "empleados",
+                    "isPath": false
+                },
+                {
+                    "name": "suffix",
+                    "value": "empleado",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "2cb5e12c-e05c-43ca-a3c4-ddabdf0b3d73",
+            "colId": "d3a4d576-fd74-4579-bf46-32e3d1c947c0",
+            "containerId": "",
+            "name": "PUT - Actualizar Contraseña",
+            "url": "localhost/Estadias_BorderBytes/empleados?upLogin=true&suffix=empleado&id=1",
+            "method": "PUT",
+            "sortNum": 210000,
+            "created": "2023-07-14T15:47:54.370Z",
+            "modified": "2024-02-15T06:22:37.789Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "bz8VVmSR5Pvb589EhAR2YUH25e3VB7"
+                }
+            ],
+            "params": [
+                {
+                    "name": "upLogin",
+                    "value": "true",
+                    "isPath": false
+                },
+                {
+                    "name": "suffix",
+                    "value": "empleado",
+                    "isPath": false
+                },
+                {
+                    "name": "id",
+                    "value": "1",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "email_empleado",
+                        "value": "soporte@borderbytes.mx"
+                    },
+                    {
+                        "name": "password_empleado",
+                        "value": "12345678"
+                    },
+                    {
+                        "name": "new_password",
+                        "value": "ABCabc123*"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "3980c1e6-3e69-41ba-b6d6-9e0c765b6231",
+            "colId": "d3a4d576-fd74-4579-bf46-32e3d1c947c0",
+            "containerId": "",
+            "name": "Ocultar registro",
+            "url": "localhost/ProyectoEstadias/API/platillos?deleteId=1&nameId=id_platillo&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2OTA4MTczODksImV4cCI6MTY5MDkwMzc4OSwiZGF0YSI6eyJpZCI6MTUsImVtYWlsIjoiam9lbEBjb3JyZW8uY29tIn19.6feT1uUCEouOtG7cqrNms3KOaui_jVWPd92G6LDys2Y&table=empleados&suffix=empleado",
+            "method": "PUT",
+            "sortNum": 220000,
+            "created": "2023-06-08T12:44:19.242Z",
+            "modified": "2023-07-31T19:15:27.175Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "bz8VVmSR5Pvb589EhAR2YUH25e3VB7"
+                }
+            ],
+            "params": [
+                {
+                    "name": "deleteId",
+                    "value": "1",
+                    "isPath": false
+                },
+                {
+                    "name": "nameId",
+                    "value": "id_platillo",
+                    "isPath": false
+                },
+                {
+                    "name": "token",
+                    "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2OTA4MTczODksImV4cCI6MTY5MDkwMzc4OSwiZGF0YSI6eyJpZCI6MTUsImVtYWlsIjoiam9lbEBjb3JyZW8uY29tIn19.6feT1uUCEouOtG7cqrNms3KOaui_jVWPd92G6LDys2Y",
+                    "isPath": false
+                },
+                {
+                    "name": "table",
+                    "value": "empleados",
+                    "isPath": false
+                },
+                {
+                    "name": "suffix",
+                    "value": "empleado",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "status_platillos",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        }
+    ]
+}
